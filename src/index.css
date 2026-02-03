@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 55 33% 92%;
+    --foreground: 210 50% 24%;
+    --card: 55 33% 95%;
+    --card-foreground: 210 50% 24%;
+    --popover: 55 33% 95%;
+    --popover-foreground: 210 50% 24%;
+    --primary: 210 50% 24%;
+    --primary-foreground: 55 33% 92%;
+    --secondary: 43 74% 52%;
+    --secondary-foreground: 210 50% 24%;
+    --muted: 40 30% 85%;
+    --muted-foreground: 210 30% 40%;
+    --accent: 14 68% 63%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 40 25% 80%;
+    --input: 40 25% 85%;
+    --ring: 43 74% 52%;
+    --radius: 0.625rem;
+    --sidebar-background: 55 33% 95%;
+    --sidebar-foreground: 210 50% 24%;
+    --sidebar-primary: 210 50% 24%;
+    --sidebar-primary-foreground: 55 33% 92%;
+    --sidebar-accent: 40 30% 90%;
+    --sidebar-accent-foreground: 210 50% 24%;
+    --sidebar-border: 40 25% 85%;
+    --sidebar-ring: 43 74% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-cream text-navy font-inter antialiased;
+    background-image: 
+      radial-gradient(ellipse at 20% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(224, 122, 95, 0.03) 0%, transparent 50%);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold to-gold-light;
+  }
+  
+  .btn-primary {
+    @apply bg-terracotta text-white px-8 py-3 rounded-elegant font-medium 
+           transition-all duration-300 hover:bg-terracotta-dark hover:shadow-elegant
+           focus:outline-none focus:ring-2 focus:ring-terracotta focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-navy text-cream px-8 py-3 rounded-elegant font-medium 
+           transition-all duration-300 hover:bg-navy-light hover:shadow-elegant
+           focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2;
+  }
+  
+  .card-elegant {
+    @apply bg-white/80 backdrop-blur-sm rounded-elegant shadow-elegant 
+           border border-parchment-dark/30 transition-all duration-300;
+  }
+  
+  .card-elegant:hover {
+    @apply shadow-elegant-lg -translate-y-1;
+  }
+  
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24;
+  }
+  
+  .parchment-texture {
+    background-image: 
+      linear-gradient(135deg, rgba(244, 232, 208, 0.3) 0%, rgba(250, 243, 227, 0.5) 100%),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-blend-mode: soft-light, overlay;
+  }
+  
+  .nav-link {
+    @apply relative text-navy font-medium transition-colors duration-300 hover:text-terracotta;
+  }
+  
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-terracotta transition-all duration-300;
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+  
+  .pull-quote {
+    @apply relative pl-6 border-l-4 border-gold italic text-navy/80 font-playfair text-xl;
+  }
+  
+  .menu-item {
+    @apply flex justify-between items-start py-4 border-b border-parchment-dark/30;
+  }
+  
+  .menu-item:last-child {
+    @apply border-b-0;
+  }
+  
+  .badge-classic {
+    @apply inline-flex items-center px-3 py-1 bg-gold/20 text-gold-dark text-xs font-semibold 
+           rounded-full uppercase tracking-wider;
+  }
+}
+
+@layer utilities {
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F5DC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E3A5F;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2A4A73;
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(212, 175, 55, 0.3);
+  color: #1E3A5F;
+}

@@ -1,0 +1,172 @@
+/* App-specific styles */
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure images don't overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid #D4AF37;
+  outline-offset: 2px;
+}
+
+/* Button hover lift effect */
+button:not(:disabled):hover {
+  transform: translateY(-1px);
+}
+
+button:not(:disabled):active {
+  transform: translateY(0);
+}
+
+/* Link transitions */
+a {
+  transition: color 0.3s ease;
+}
+
+/* Form input focus states */
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+/* Card hover effects */
+.card-elegant {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Menu item hover */
+.menu-item {
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+/* Gallery image hover */
+.gallery-image {
+  transition: transform 0.7s ease;
+}
+
+/* Navigation link underline animation */
+.nav-link::after {
+  transition: width 0.3s ease;
+}
+
+/* Pull quote styling */
+.pull-quote {
+  position: relative;
+}
+
+.pull-quote::before {
+  content: '"';
+  position: absolute;
+  left: -0.5rem;
+  top: -0.5rem;
+  font-size: 3rem;
+  color: #D4AF37;
+  opacity: 0.3;
+  font-family: 'Playfair Display', serif;
+  line-height: 1;
+}
+
+/* Badge styling */
+.badge-classic {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Loading animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.loading-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(244, 232, 208, 0) 0%,
+    rgba(244, 232, 208, 0.5) 50%,
+    rgba(244, 232, 208, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Mobile menu animation */
+.mobile-menu-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.mobile-menu-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.mobile-menu-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.mobile-menu-exit-active {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Lightbox backdrop */
+.lightbox-backdrop {
+  backdrop-filter: blur(8px);
+}
+
+/* Responsive typography adjustments */
+@media (max-width: 640px) {
+  .font-playfair {
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .card-elegant {
+    border-width: 2px;
+  }
+  
+  .nav-link::after {
+    height: 3px;
+  }
+}
