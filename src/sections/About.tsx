@@ -39,7 +39,8 @@ export function About() {
                 <div className="relative overflow-hidden rounded-elegant shadow-elegant-lg">
                   <img
                     src="/images/our-story/Art.png"
-                    alt="Traditional crêpe making"
+                    alt="Traditional French crêpe making at Catherine's Crêperie in Folsom, CA"
+                    loading="lazy"
                     className="w-full h-64 sm:h-80 object-cover transition-transform duration-700 hover:scale-105"
                   />
                 </div>
@@ -50,7 +51,8 @@ export function About() {
                 <div className="relative overflow-hidden rounded-elegant shadow-elegant-lg -mb-8">
                   <img
                     src="/images/our-story/the-people.png"
-                    alt="Catherine, our founder"
+                    alt="Catherine, founder of Catherine's Crêperie, sharing her passion for authentic French crêpes"
+                    loading="lazy"
                     className="w-full h-48 sm:h-64 object-cover transition-transform duration-700 hover:scale-105"
                   />
                 </div>
@@ -98,9 +100,9 @@ export function About() {
             >
               <p>
                 Catherine's Crêperie was born from a simple dream: to share the authentic taste 
-                of French crêpes with our community. Inspired by the charming crêperies of 
-                Brittany and the bustling streets of Paris, we bring centuries of French 
-                culinary tradition to your table.
+                of French crêpes with our community in Folsom, California. Inspired by the 
+                charming crêperies of Brittany and the bustling streets of Paris, we bring 
+                centuries of French culinary tradition to your table at 200 Wool Street.
               </p>
               <p>
                 Our crêpes are made using time-honored recipes passed down through generations, 

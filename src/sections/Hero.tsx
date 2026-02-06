@@ -30,11 +30,10 @@ export function Hero() {
         style={{ y }}
         className="absolute inset-0 z-0"
       >
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url(/images/hero/hero-img.png)',
-          }}
+        <img
+          src="/images/hero/hero-img.png"
+          alt="Authentic French crêpes at Catherine's Crêperie in Folsom, California"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-navy/60 via-navy/40 to-cream" />
       </motion.div>
@@ -125,7 +124,7 @@ export function Hero() {
           className="flex items-center justify-center gap-2 text-cream/60 text-sm"
         >
           <MapPin className="w-4 h-4" />
-          <span>123 Rue de Paris, Downtown</span>
+          <span>200 Wool Street, Folsom, CA 95630</span>
         </motion.div>
       </motion.div>
 

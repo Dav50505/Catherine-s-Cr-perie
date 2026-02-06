@@ -12,38 +12,38 @@ interface GalleryImage {
 const galleryImages: GalleryImage[] = [
   {
     src: '/images/gallery/gal1.png',
-    alt: '',
-    title: '',
+    alt: 'Freshly made savory crêpe with ham and melted cheese at Catherine\'s Crêperie',
+    title: 'Savory Crêpe',
     span: 'col-span-1 row-span-2',
   },
   {
     src: '/images/gallery/gal2.png',
-    alt: '',
-    title: '',
+    alt: 'Sweet Nutella and banana crêpe topped with powdered sugar',
+    title: 'Nutella Banana Crêpe',
     span: 'col-span-1 row-span-1',
   },
   {
     src: '/images/gallery/gal3.png',
-    alt: '',
-    title: '',
+    alt: 'Traditional French crêpe with fresh strawberries and whipped cream',
+    title: 'Strawberry Crêpe',
     span: 'col-span-1 row-span-1',
   },
   {
     src: '/images/gallery/gal4.png',
-    alt: '',
-    title: '',
+    alt: 'Catherine\'s signature crêpe with brie, pesto, and pine nuts',
+    title: 'Catherine\'s Signature',
     span: 'col-span-1 row-span-2',
   },
   {
     src: '/images/gallery/gal5.png',
-    alt: '',
-    title: '',
+    alt: 'Handcrafted sweet crêpe with salted caramel drizzle',
+    title: 'Salted Caramel Crêpe',
     span: 'col-span-1 row-span-1',
   },
   {
     src: '/images/gallery/gal6.png',
-    alt: '',
-    title: '',
+    alt: 'Classic French lemon sugar crêpe served at Catherine\'s Crêperie in Folsom',
+    title: 'Lemon Sugar Crêpe',
     span: 'col-span-1 row-span-1',
   },
 ];
@@ -95,6 +95,7 @@ export function Gallery() {
               <img
                 src={image.src}
                 alt={image.alt}
+                loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               
@@ -145,6 +146,7 @@ export function Gallery() {
               <img
                 src={selectedImage.src}
                 alt={selectedImage.alt}
+                loading="lazy"
                 className="max-w-full max-h-[80vh] object-contain rounded-elegant"
               />
               {selectedImage.title && (
