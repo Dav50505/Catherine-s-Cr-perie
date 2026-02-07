@@ -124,11 +124,11 @@ export function Footer() {
                 <span>(916) 298-4820</span>
               </a>
               <a
-                href="mailto:bonjour@catherinescreperie.com"
+                href="mailto:catherinebonnefoy@yahoo.com"
                 className="flex items-center gap-3 text-sm text-cream/70 hover:text-gold transition-colors"
               >
                 <Mail className="w-4 h-4 text-gold flex-shrink-0" />
-                <span>bonjour@catherinescreperie.com</span>
+                <span>catherinebonnefoy@yahoo.com</span>
               </a>
             </div>
 

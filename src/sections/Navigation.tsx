@@ -178,8 +178,8 @@ export function Navigation() {
                   transition={{ duration: 0.3, delay: 0.6 }}
                   className="mt-8 pt-8 border-t border-parchment-dark/30"
                 >
-                  <p className="text-sm text-navy/60 mb-2">123 Rue de Paris, Downtown</p>
-                  <p className="text-sm text-navy/60">(123) 456-7890</p>
+                  <p className="text-sm text-navy/60 mb-2">200 Wool Street, Folsom, CA 95630</p>
+                  <p className="text-sm text-navy/60">(916) 298-4820</p>
                 </motion.div>
               </div>
             </motion.div>
